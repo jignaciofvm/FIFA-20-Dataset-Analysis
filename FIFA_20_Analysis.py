@@ -31,8 +31,8 @@ with dataset:
         75 variables.
     """)
     
-    fifa_dataset = Path(__file__).parents[1] / 'files/fifa20_data.csv'
-    fifa_similarity = Path(__file__).parents[1] / 'files/df_similarity.csv'
+    fifa_dataset = Path(__file__).parents[0] / 'files/fifa20_data.csv'
+    fifa_similarity = Path(__file__).parents[0] / 'files/df_similarity.csv'
      
     df = pd.read_csv(fifa_dataset, engine='python', encoding='utf8', sep='delimiter')
     df_similarity = pd.read_csv(fifa_similarity, engine='python', encoding='utf8', sep='delimiter')
