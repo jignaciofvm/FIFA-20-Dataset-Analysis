@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from scipy.spatial import distance
 from pathlib import Path
+# import pickle
 
 st.set_page_config(layout="wide")
 header = st.beta_container()
@@ -51,7 +52,7 @@ with recommender:
  'Sergio Ramos García','Sergio Agüero','Giorgio Chiellini','Paulo Dybala','Ederson Santana de Moraes','Sadio Mané','Raheem Sterling','Paul Pogba','Thibaut Courtois','Christian Eriksen',
  'Pierre-Emerick Aubameyang','Marco Reus','Toni Kroos','Diego Godín','Edinson Cavani','David Josué Jiménez Silva','Hugo Lloris','Manuel Neuer','Samir Handanovič','Gerard Piqué Bernabeu'],
  index = 0)
-    num_players = sel_col.selectbox('# of Players', options = [5, 10, 15, 20, 50], index = 0)
+    num_players = disp_col.selectbox('# of Players', options = [5, 10, 15, 20, 50], index = 0)
 
 X = df_similarity.drop(['Name','Overall', 'Value'], axis = 1)
 std=StandardScaler()
