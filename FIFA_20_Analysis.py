@@ -14,20 +14,18 @@ model = st.beta_container()
 with header:
     st.title('FIFA 20 Analysis - Jose Ignacio Fdez')
     st.text("""
-        ES: En este proyecto presentamos, por un lado, un sistema de recomendación de jugadores y, por otro, un modelo de predicción del valor de un futbolista en el mercado en función de sus características
+        ES: En este proyecto presentamos, por un lado, un sistema de recomendación de jugadores y, por otro, un modelo de predicción del valor de un futbolista en 
+        el mercado en función de sus características
 
-        EN: In this project we present a player recommendation system and a prediction model of the
-        player's value in the market based on its characteristics
+        EN: In this project we present a player recommendation system and a prediction model of the player's value in the market based on its characteristics
          """)
 
 with dataset:
     st.header('FIFA 20 Dataset')
     st.text("""
-        ES: El conjunto de datos empleado se ha obtenido de Kaggle y consta de un total de 18.000
-        futbolistas y 75 variables.
+        ES: El conjunto de datos empleado se ha obtenido de Kaggle y consta de un total de 18.000 futbolistas y 75 variables.
 
-        EN: The dataset used was obtained from Kaggle and consists of 18,000 players and
-        75 variables.
+        EN: The dataset used was obtained from Kaggle and consists of 18,000 players and 75 variables.
     """)
     
     fifa_dataset = Path(__file__).parents[0] / 'files/fifa20_data.csv'
@@ -37,10 +35,8 @@ with dataset:
     df_similarity = pd.read_csv(fifa_similarity, engine='python', encoding='utf8')
     st.write(df.head())
     st.text("""
-        ES: Comentar que el dataset anterior ha sido tratado. Si quiere seguir el proyecto, acuda
-        a mi [Github](https://github.com/jignaciofvm)
-        EN: Please note that the previous dataset has been processed. If you want to follow the
-        project, go to my [Github](https://github.com/jignaciofvm)
+        ES: Comentar que el dataset anterior ha sido tratado. Si quiere seguir el proyecto, acuda a mi [Github](https://github.com/jignaciofvm)
+        EN: Please note that the previous dataset has been processed. If you want to follow the project, go to my [Github](https://github.com/jignaciofvm)
         """)
 
 with recommender:
