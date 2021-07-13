@@ -30,8 +30,8 @@ with dataset:
         75 variables.
     """)
      
-    df = pd.read_csv('https://github.com/jignaciofvm/FIFA-20-Dataset-Analysis/blob/main/files/fifa20_data.csv', engine='python', encoding='utf8', sep='delimiter')
-    df_similarity = pd.read_csv('https://github.com/jignaciofvm/FIFA-20-Dataset-Analysis/blob/main/files/df_similarity.csv', engine='python', encoding='utf8', sep='delimiter')
+    df = pd.read_csv('main/files/fifa20_data.csv', engine='python', encoding='utf8', sep='delimiter')
+    df_similarity = pd.read_csv('main/files/df_similarity.csv', engine='python', encoding='utf8', sep='delimiter')
     st.write(df.head())
     st.text("""
         ES: Comentar que el dataset anterior ha sido tratado. Si quiere seguir el proyecto, acuda
