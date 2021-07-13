@@ -29,9 +29,7 @@ with dataset:
         EN: The dataset used was obtained from Kaggle and consists of 18,000 players and
         75 variables.
     """)
-    col_names_df = ["Name","Image","Country","Position","Age","Overall","Potential","Club","ID","Height","Weight","foot","BOV","BP","Growth","Joined","Loan Date End",
-    "Value","Wage","Release Clause","Attacking","Crossing","Finishing","Heading Accuracy","Short Passing","Volleys","Skill","Dribbling",
-    "Curve","FK Accuracy","Long Passing","Ball Control","Movement","Acceleration","Sprint Speed","Agility","Reactions","Balance","Power","Shot Power","Jumping","Stamina","Strength","Long"]
+   
     df = pd.read_csv('https://github.com/jignaciofvm/FIFA-20-Dataset-Analysis/blob/main/files/fifa20_data.csv', sep='delimiter')
     df_similarity = pd.read_csv('https://github.com/jignaciofvm/FIFA-20-Dataset-Analysis/blob/main/files/df_similarity.csv', sep='delimiter')
     st.write(df.head())
