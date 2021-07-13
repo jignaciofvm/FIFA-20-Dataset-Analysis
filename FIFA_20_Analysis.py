@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from scipy.spatial import distance
+from pathlib import Path
 
 header = st.beta_container()
 dataset = st.beta_container()
@@ -29,9 +30,12 @@ with dataset:
         EN: The dataset used was obtained from Kaggle and consists of 18,000 players and
         75 variables.
     """)
+    
+    fifa_dataset = Path(__file__).parents[1] / 'files/fifa20_data.csv'
+    fifa_similarity = Path(__file__).parents[1] / 'files/df_similarity.csv'
      
-    df = pd.read_csv('main/files/fifa20_data.csv', engine='python', encoding='utf8', sep='delimiter')
-    df_similarity = pd.read_csv('main/files/df_similarity.csv', engine='python', encoding='utf8', sep='delimiter')
+    df = pd.read_csv(fifa_dataset, engine='python', encoding='utf8', sep='delimiter')
+    df_similarity = pd.read_csv(fifa_similarity, engine='python', encoding='utf8', sep='delimiter')
     st.write(df.head())
     st.text("""
         ES: Comentar que el dataset anterior ha sido tratado. Si quiere seguir el proyecto, acuda
