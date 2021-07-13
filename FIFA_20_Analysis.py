@@ -777,8 +777,8 @@ with model:
 
     numeric_variables = ['Age', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY', 'PAC']
     categorical_variables = ['position_fe','Club']
-    model = Path(__file__).parent / 'files/model_XGB.sav'
-    loaded_model = pickle.load(open(model, 'rb'))
+    modelo_path = Path(__file__).parents[0] / 'files/model_XGB.sav'
+    loaded_model = pickle.load(open(modelo_path, 'rb'))
     data = [age, position_fe, IR, SHO, PAS, DRI, DEF, PHY, PAC, Club]
     df_model = pd.DataFrame([data], columns = ['Age','position_fe','IR','SHO', 'PAS', 'DRI', 'DEF', 'PHY', 'PAC', 'Club'])
     st.subheader('Predicción del precio / Price prediction: ')
