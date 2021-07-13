@@ -85,6 +85,7 @@ def similaridad (nombre, num_jugadores):
   similarity = sim2.iloc[sim2["cossim"].sort_values(ascending=False).index].head(num_jugadores+1)
   sim_df = similarity.drop('cossim',axis = 1)
   sim_df['Value'] = sim_df['Value'].map('€{:,.2f}'.format)
+  sim_df = sim_df.reset_index(drop=True)
   return sim_df.iloc[1:,:]
 
 st.write(similaridad(player, num_players))
