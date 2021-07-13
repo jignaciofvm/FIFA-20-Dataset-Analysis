@@ -4,6 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from scipy.spatial import distance
 from pathlib import Path
 import pickle
+import numpy as np
 
 st.set_page_config(layout="wide")
 header = st.beta_container()
