@@ -29,7 +29,9 @@ with dataset:
         EN: The dataset used was obtained from Kaggle and consists of 18,000 players and
         75 variables.
     """)
-    df_similarity = pd.read_csv('FIFA-20-Dataset-Analysis/files/df_similarity.csv')
+     
+    df = pd.read_csv('github.com/jignaciofvm/FIFA-20-Dataset-Analysis/blob/main/files/fifa20_data.csv')
+    df_similarity = pd.read_csv('github.com/jignaciofvm/FIFA-20-Dataset-Analysis/blob/main/files/df_similarity.csv')
     st.write(df.head())
     st.text("""
         ES: Comentar que el dataset anterior ha sido tratado. Si quiere seguir el proyecto, acuda
