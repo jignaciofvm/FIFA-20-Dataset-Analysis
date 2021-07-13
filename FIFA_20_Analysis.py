@@ -95,7 +95,6 @@ with model:
             EN: If you want to know the market value of your player, you only need to indicate the following attributes.
             """)
 
-    loaded_model = pickle.load(open("model_XGB.sav",'rb'))
     a, b= st.beta_columns(2)
     age = a.slider("Edad del jugador / Player's Age", min_value = 16, max_value = 42, value = 20, step = 1)
     position_fe = a.selectbox('Posición / Position', options = ['delantero', 'mediocentro', 'defensa', 'portero'])
