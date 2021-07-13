@@ -14,9 +14,7 @@ model = st.beta_container()
 with header:
     st.title('FIFA 20 Analysis - Jose Ignacio Fdez')
     st.text("""
-        ES: En este proyecto presentamos, por un lado, un sistema de recomendación de jugadores
-        y, por otro, un modelo de predicción del valor de un futbolista en el mercado en función
-        de sus características
+        ES: En este proyecto presentamos, por un lado, un sistema de recomendación de jugadores y, por otro, un modelo de predicción del valor de un futbolista en el mercado en función de sus características
 
         EN: In this project we present a player recommendation system and a prediction model of the
         player's value in the market based on its characteristics
