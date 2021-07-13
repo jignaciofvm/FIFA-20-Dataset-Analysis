@@ -34,8 +34,8 @@ with dataset:
     fifa_dataset = Path(__file__).parents[0] / 'files/fifa20_data.csv'
     fifa_similarity = Path(__file__).parents[0] / 'files/df_similarity.csv'
      
-    df = pd.read_csv(fifa_dataset, engine='python', encoding='utf8'')
-    df_similarity = pd.read_csv(fifa_similarity, engine='python', encoding='utf8)
+    df = pd.read_csv(fifa_dataset, engine='python', encoding='utf8')
+    df_similarity = pd.read_csv(fifa_similarity, engine='python', encoding='utf8')
     st.write(df.head())
     st.text("""
         ES: Comentar que el dataset anterior ha sido tratado. Si quiere seguir el proyecto, acuda
