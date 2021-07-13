@@ -32,7 +32,7 @@ with dataset:
     col_names_df = ["Name","Image","Country","Position","Age","Overall","Potential","Club","ID","Height","Weight","foot","BOV","BP","Growth","Joined","Loan Date End",
     "Value","Wage","Release Clause","Attacking","Crossing","Finishing","Heading Accuracy","Short Passing","Volleys","Skill","Dribbling",
     "Curve","FK Accuracy","Long Passing","Ball Control","Movement","Acceleration","Sprint Speed","Agility","Reactions","Balance","Power","Shot Power","Jumping","Stamina","Strength","Long"]
-    df = pd.read_csv('https://github.com/jignaciofvm/FIFA-20-Dataset-Analysis/blob/main/files/fifa20_data.csv', names = col_names_df)
+    df = pd.read_csv('https://github.com/jignaciofvm/FIFA-20-Dataset-Analysis/blob/main/files/fifa20_data.csv',  error_bad_lines=False)
     df_similarity = pd.read_csv('https://github.com/jignaciofvm/FIFA-20-Dataset-Analysis/blob/main/files/df_similarity.csv')
     st.write(df.head())
     st.text("""
