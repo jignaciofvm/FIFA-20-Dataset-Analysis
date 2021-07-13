@@ -4,6 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from scipy.spatial import distance
 from pathlib import Path
 
+st.set_page_config(layout="wide")
 header = st.beta_container()
 dataset = st.beta_container()
 recommender = st.beta_container()
