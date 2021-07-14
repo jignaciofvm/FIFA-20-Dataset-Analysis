@@ -74,16 +74,28 @@ with recommender:
       cossim=[]
       for i in range (0,len(X)): # Recorremos el dataframe
           cossim.append(1 - distance.cosine(X[p_ind],X[i])) # Restamos uno para obtener el valor
-      pd.Series(cossim)
-      sim2={"Name":sn,"cossim":cossim, 'Value': sv, 'Overall': so, 'foot':sf, 'PAC': sp, 'SHO': ss, 'PAS': spp, 'DRI': sd, 'DEF': sdd, 'PHY': sph}
-      sim2=pd.DataFrame(sim2)
-      # Para transformar de nuevo la variable foot a Right or Left
-      sim2['foot'] = sim2['foot'].apply(lambda x: 'Right' if x ==0 else 'Left')
-      similarity = sim2.iloc[sim2["cossim"].sort_values(ascending=False).index].head(num_jugadores+1)
-      sim_df = similarity.drop('cossim',axis = 1)
-      sim_df['Value'] = sim_df['Value'].map('€{:,.2f}'.format)
-      sim_df = sim_df.reset_index(drop=True)
-      return sim_df.iloc[1:,:]
+      pd.Series(cossim) 
+      if (df[df['Name'] == nombre]['position_fe'] != 'portero').any():
+        sim2={"Name":sn,"cossim":cossim, 'Value': sv, 'Overall': so, 'foot':sf, 'PAC': sp, 'SHO': ss, 'PAS': spp, 'DRI': sd, 'DEF': sdd, 'PHY': sph} 
+        sim2=pd.DataFrame(sim2)
+        # Para transformar de nuevo la variable foot a Right or Left
+        sim2['foot'] = sim2['foot'].apply(lambda x: 'Right' if x ==0 else 'Left')
+        similarity = sim2.iloc[sim2["cossim"].sort_values(ascending=False).index].head(num_jugadores+1)
+        sim_df = similarity.drop('cossim',axis = 1)
+        sim_df['Value'] = sim_df['Value'].map('{:,.2f} €'.format)
+        sim_df = sim_df.reset_index(drop=True)
+        return sim_df.iloc[1:,:]
+      else:
+        sim2 = {"Name":sn,"cossim":cossim, 'Value': sv, 'Overall': so, 'foot':sf,'GK Diving': por_diving,
+            'GK Handling': por_hand,"GK Kicking" :por_kick, "GK Positioning": por_pos, "GK Reflexes": por_ref}
+        sim2=pd.DataFrame(sim2)
+        # Para transformar de nuevo la variable foot a Right or Left
+        sim2['foot'] = sim2['foot'].apply(lambda x: 'Right' if x ==0 else 'Left')
+        similarity = sim2.iloc[sim2["cossim"].sort_values(ascending=False).index].head(num_jugadores+1)
+        sim_df = similarity.drop('cossim',axis = 1)
+        sim_df['Value'] = sim_df['Value'].map('{:,.2f} €'.format)
+        sim_df = sim_df.reset_index(drop=True)
+        return sim_df.iloc[1:,:]
 
     st.write(similaridad(player, num_players))
 
