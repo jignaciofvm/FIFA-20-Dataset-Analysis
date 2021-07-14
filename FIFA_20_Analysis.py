@@ -68,6 +68,11 @@ with recommender:
     sd = df_similarity['DRI'].to_list()
     sdd = df_similarity['DEF'].to_list()
     sph = df_similarity['PHY'].to_list()
+    por_diving = df_similarity['GK Diving'].to_list()
+    por_hand = df_similarity['GK Handling'].to_list()
+    por_kick = df_similarity['GK Kicking'].to_list()
+    por_pos = df_similarity['GK Positioning'].to_list()
+    por_ref = df_similarity['GK Reflexes'].to_list()
 
     def similaridad (nombre, num_jugadores):
       p_ind=df_similarity[df_similarity["Name"]==nombre].index[0] # Indice del nombre del jugador
