@@ -80,7 +80,7 @@ with recommender:
       for i in range (0,len(X)): # Recorremos el dataframe
           cossim.append(1 - distance.cosine(X[p_ind],X[i])) # Restamos uno para obtener el valor
       pd.Series(cossim) 
-      if (df[df['Name'] == nombre]['position_fe'] != 'portero').any():
+      if (df[df['Name'] == nombre]['Position'] != 'GK').any():
         sim2={"Name":sn,"cossim":cossim, 'Value': sv, 'Overall': so, 'foot':sf, 'PAC': sp, 'SHO': ss, 'PAS': spp, 'DRI': sd, 'DEF': sdd, 'PHY': sph} 
         sim2=pd.DataFrame(sim2)
         # Para transformar de nuevo la variable foot a Right or Left
