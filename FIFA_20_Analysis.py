@@ -55,9 +55,11 @@ with recommender:
     index = 0)
     num_players = disp_col.selectbox('# of Players', options = [5, 10, 15, 20, 50], index = 0)
 
-    X = df_similarity.drop(['Name','Overall', 'Value'], axis = 1)
+    X = df_similarity.drop(['Name','Overall', 'Value', 'Club'], axis = 1)
     std=StandardScaler()
     X=std.fit_transform(X)
+    
+    sc = df_similarity['Club'].to_list()
     sn=df_similarity["Name"].to_list()
     sv=df_similarity["Value"].to_list()
     so = df_similarity['Overall'].to_list()
@@ -81,7 +83,7 @@ with recommender:
           cossim.append(1 - distance.cosine(X[p_ind],X[i])) # Restamos uno para obtener el valor
       pd.Series(cossim) 
       if (df[df['Name'] == nombre]['Position'] != 'GK').any():
-        sim2={"Name":sn,"cossim":cossim, 'Value': sv, 'Overall': so, 'foot':sf, 'PAC': sp, 'SHO': ss, 'PAS': spp, 'DRI': sd, 'DEF': sdd, 'PHY': sph} 
+        sim2={"Name":sn,"cossim":cossim, 'Club':sc,'Value': sv, 'Overall': so, 'foot':sf, 'PAC': sp, 'SHO': ss, 'PAS': spp, 'DRI': sd, 'DEF': sdd, 'PHY': sph} 
         sim2=pd.DataFrame(sim2)
         # Para transformar de nuevo la variable foot a Right or Left
         sim2['foot'] = sim2['foot'].apply(lambda x: 'Right' if x ==0 else 'Left')
@@ -91,7 +93,7 @@ with recommender:
         sim_df = sim_df.reset_index(drop=True)
         return sim_df.iloc[1:,:]
       else:
-        sim2 = {"Name":sn,"cossim":cossim, 'Value': sv, 'Overall': so, 'foot':sf,'GK Diving': por_diving,
+        sim2 = {"Name":sn,"cossim":cossim, 'Club':sc,'Value': sv, 'Overall': so, 'foot':sf,'GK Diving': por_diving,
             'GK Handling': por_hand,"GK Kicking" :por_kick, "GK Positioning": por_pos, "GK Reflexes": por_ref}
         sim2=pd.DataFrame(sim2)
         # Para transformar de nuevo la variable foot a Right or Left
