@@ -19,7 +19,8 @@ with header:
         ES: En este proyecto, desarrollado por Jose Ignacio Fernández, se presenta, por un lado, un sistema de recomendación de jugadores y, por otro, 
         un modelo de predicción del valor de un futbolista en el mercado en función de sus características
 
-        EN: In this project, developed by Jose Ignacio Fernandez, we present a player recommendation system and a prediction model of the player's value in the market based on its characteristics
+        EN: In this project, developed by Jose Ignacio Fernandez, we present a player recommendation system and a prediction model of the player's value in the market based 
+        on its characteristics
          """)
 
 with dataset:
