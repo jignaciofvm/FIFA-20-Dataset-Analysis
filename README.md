@@ -8,7 +8,7 @@ The goal of this project was to use soccer data related to 18.000 players that l
 * Create a Recommender Player System based on playing style
 * Develop two ML models
 
-Also, you can find the 'Futbolytics' tool with the Recommender Player System and the Price Prediction Model Deployment [here](https://share.streamlit.io/jignaciofvm/fifa-20-dataset-analysis/main/FIFA_20_Analysis.py)
+Also, you can find the 'Futbolytics' tool with the Recommender Player System and the Price Prediction Model Deployment [here](https://futbolytics-st.herokuapp.com/)
 
 ---
 ## Exploratory Data Analysis: Understanding the variables in the dataset
