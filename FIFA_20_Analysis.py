@@ -14,7 +14,7 @@ model = st.beta_container()
 
 
 with header:
-    st.title('FIFA 20 Analysis - Jose Ignacio Fdez')
+    st.title('Futbolytics - Jose Ignacio Fernandez')
     st.text("""
         ES: En este proyecto presentamos, por un lado, un sistema de recomendación de jugadores y, por otro, un modelo de predicción del valor de un futbolista en 
         el mercado en función de sus características
