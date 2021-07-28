@@ -32,14 +32,14 @@ We can appreciate in the graph that from age of 40 the only players who are stil
 Focusing on the player's age we can have doubts about the leagues that are in the dataset (La Liga, Premier League, Bundesliga, Serie A, Eredivisie, Liga NOS, MLS and Chinese Superleague)
 ![](images/4_Age_by_Liga.png)
 
-We the chart above we can conclude that if we are playing soccer and we are in the final stages of our careers, we should focus on finding a team in China or MLS instead of other leagues that have the average age younger such as the Premier League. The reason for this is because the fact that having a younger average could indicate that the league is more competitive than others.
+With the chart above we can conclude that if we are playing soccer and we are in the final stages of our careers, we should focus on finding a team in China or MLS instead of other leagues that have the average age younger such as the Premier League. The reason for this is because the fact that having a younger average could indicate that the league is more competitive than others.
 
 ![](images/9_Value_by_Liga.png)
 
 We can confirm that the best players are playing in the EU leagues such as PL (England), La Liga (Spain) or Bundesliga (Germany).
 
 ### What happens with the player's position?
-The position_fe indicates if the position of the player (delantero, mediocentro, defensa y portero : striker, midfielder, defender and goalkeeper). We can think that playing in one position or another could indicate different abilities...
+The position_fe indicates the position of the player (delantero, mediocentro, defensa y portero : striker, midfielder, defender and goalkeeper). We can think that playing in one position or another could indicate different abilities...
 ![](images/8_Position_Abilities.png)
 
 And that's true!! The top 5 abilities required for playing as a midfielder are not the same as a striker, for example.
