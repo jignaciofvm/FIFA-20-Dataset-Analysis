@@ -47,7 +47,7 @@ with recommender:
     st.text("""
             ES: Por favor, selecciona al jugador para el que desea encontrar sustituto
             EN: Please, choose player for whom you want to find a replacement""")
-    sel_col,disp_col = st.beta_columns(2)
+    sel_col,disp_col = st.columns(2)
     player = sel_col.selectbox('Player', options = ['Lionel Messi',
     'C. Ronaldo dos Santos Aveiro','Neymar da Silva Santos Jr.','Jan Oblak','Kevin De Bruyne','Eden Hazard','Mohamed Salah','Virgil van Dijk','Marc-André ter Stegen','Luka Modrić','Kylian Mbappé',
     "N'Golo Kanté",'Alisson Ramses Becker','Harry Kane','Kalidou Koulibaly','Antoine Griezmann','David De Gea Quintana','Sergio Busquets Burgos','Robert Lewandowski','Luis Suárez',
@@ -115,7 +115,7 @@ with model:
             EN: If you want to know the market value of your player, you only need to indicate the following attributes.
             """)
 
-    a, b= st.beta_columns(2)
+    a, b= st.columns(2)
     age = a.slider("Edad del jugador / Player's Age", min_value = 16, max_value = 42, value = 20, step = 1)
     position_fe = a.selectbox('Posición / Position', options = ['delantero', 'mediocentro', 'defensa', 'portero'])
     IR = a.selectbox('Reconocimiento Internacional / International Recognition', options = [1,2,3,4,5])
