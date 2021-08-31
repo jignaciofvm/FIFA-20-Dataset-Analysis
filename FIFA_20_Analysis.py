@@ -7,10 +7,10 @@ import pickle
 import numpy as np
 
 st.set_page_config(layout="wide")
-header = st.beta_container()
-dataset = st.beta_container()
-recommender = st.beta_container()
-model = st.beta_container()
+header = st.container()
+dataset = st.container()
+recommender = st.container()
+model = st.container()
 
 
 with header:
